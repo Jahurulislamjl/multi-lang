@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Avensys Selection Software</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/ownStyle.css'>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Avensys Software</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">У дома</a></li>
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Езици 
+                    <span class="caret"></span></a>
+              
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Английски</a></li>
+                        <li><a href="#">Немски</a></li>
+                        <li><a href="#">Френски</a></li>
+                        <li><a href="#">Холандски</a></li>
+                        <li><a href="#">Полски</a></li>
+                        <li><a href="#">Словенски</a></li>
+                        <li><a href="#">Pумънски</a></li>
+                        <li><a href="#">&#10004; български</a></li>
+                        <li><a href="#">Hungarian</a></li>
+                        <li><a href="#">Италиански</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Генериране на отчет</a></li>
+                <li><a href="#">Oтносно</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tab" role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#performance" aria-controls="performance" role="tab" data-toggle="tab">Характеристика</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#co2level" aria-controls="co2level" role="tab" data-toggle="tab">CO2 ниво</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content tabs">
+                        <div role="tabpanel" class="tab-pane fade in active" id="performance">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4"> <!-- Left Panel -->
+                                        <form class="form-horizontal">
+                                            <h4 class="section-header">Селеция</h4>
+                                            <hr />
+                                            <!-- Series -->
+                                            <div class="form-group">
+                                                <label for="series" class="control-label col-sm-5">Серия</label>
+                                                <div class="form-group col-sm-7">
+                                                    <select class="form-control" id="series">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Unit -->
+                                            <div class="form-group">
+                                                <label for="unit" class="control-label col-sm-5">Агрегат</label>
+                                                <div class="form-group col-sm-7">
+                                                    <select class="form-control" id="unit">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Air Flow -->
+                                            <div class="form-group">
+                                                <label for="unit" class="control-label col-sm-5">Дебит [m3/h]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="text" class="form-control" value="100" />
+                                                </div>
+                                            </div>
+                                            <!-- Max Pressure [Pa] -->
+                                            <div class="form-group">
+                                                <label for="maxpressure" class="control-label col-sm-5">Максимално налягане [Pa]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="text" class="form-control" value="13" disabled />
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <h4 class="section-header">Температура и влажност</h4>
+                                            <hr>
+                                            <!-- Fresh Inlet Temp.[C] -->
+                                            <div class="form-group">
+                                                <label for="freshInlet" class="control-label col-sm-5">Температура на пресния въздух [°C]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="number" class="form-control" value="-20" />
+                                                </div>
+                                            </div>
+                                            <!-- R.H.[%] -->
+                                            <div class="form-group">
+                                                <label for="maxpressure" class="control-label col-sm-5">R.H.[%]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="number" class="form-control" value="80" />
+                                                </div>
+                                            </div>
+                                            <!-- Fresh Inlet Temp.[C] -->
+                                            <div class="form-group">
+                                                <label for="maxpressure" class="control-label col-sm-5">Темп. На изхвърляния въздух [°C]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="number" class="form-control" value="20" />
+                                                </div>
+                                            </div>
+                                            <!-- R.H.[%] -->
+                                            <div class="form-group">
+                                                <label for="maxpressure" class="control-label col-sm-5">R.H.[%]</label>
+                                                <div class="form-group col-sm-7">
+                                                    <input type="number" class="form-control" value="60" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-8"> <!-- Right Panel -->
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                              40%
+                                            </div>
+                                        </div>
+                                        <div class="tab" role="tabpanel">
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active">
+                                                    <a href="#heat-temp" aria-controls="home" role="tab" data-toggle="tab" style="font-size:9.5px;">Данни за рекуператора / Температура и влажност</a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#electrical" aria-controls="profile" role="tab" data-toggle="tab" style="font-size:9.5px;">Електрически характеристики</a>
+                                                </li>
+                                                <li role="presentation">
+                                                    <a href="#sound" aria-controls="sound" role="tab" data-toggle="tab" style="font-size:9.5px;">Звукова мощност</a>
+                                                </li>
+                                            </ul>
+                                            <!-- Performance panes -->
+                                            <div class="tab-content tabs">
+                                                <div role="tabpanel" class="tab-pane fade in active" id="heat-temp"> <!-- Heat Exchanger Performances -->
+                                                    <h5 class="section-header">Данни за рекуператора</h5>
+                                                    <hr />
+
+                                                    <form class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-5">Пренос на топлина [W]</label>
+                                                                    <div class="form-group col-sm-7">
+                                                                        <input type="number" class="form-control" value="1.913" disabled />
+                                                                    </div>
+                                                                </div>
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-5">Осезаема топлина [W]</label>
+                                                                    <div class="form-group col-sm-7">
+                                                                        <input type="number" class="form-control" value="349" disabled />
+                                                                    </div>
+                                                                </div>
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-5">Latent Heat [W]</label>
+                                                                    <div class="form-group col-sm-7">
+                                                                        <input type="number" class="form-control" value="1.582" disabled />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-6">Ефективност [%]</label>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="number" class="form-control" value="99" disabled />
+                                                                    </div>
+                                                                </div>
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-6">Количество конденз [l/h]</label>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="number" class="form-control" value="2.32" disabled />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    
+                                                    <br /> 
+                                                    <h5 class="section-header">Температура и влажност</h5>
+                                                    <hr />
+                                                    
+                                                    <form class="form-horizontal">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-5">Температура на подавания въздух [°C]</label>
+                                                                    <div class="form-group col-sm-7">
+                                                                        <input type="number" class="form-control" value="39.6" disabled />
+                                                                    </div>
+                                                                </div>
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-5">R.H.[%]</label>
+                                                                    <div class="form-group col-sm-7">
+                                                                        <input type="number" class="form-control" value="2" disabled />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-6">Температура на изхвърляния въздух [°C]</label>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="number" class="form-control" value="29.2" disabled />
+                                                                    </div>
+                                                                </div>
+                                                                <!-- R.H.[%] -->
+                                                                <div class="form-group">
+                                                                    <label for="maxpressure" class="control-label col-sm-6">R.H.[%]</label>
+                                                                    <div class="form-group col-sm-6">
+                                                                        <input type="number" class="form-control" value="100" disabled />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                            
+                                                <div role="tabpanel" class="tab-pane fade" id="electrical">
+                                                    <form class="form-horizontal">
+                                                        <!-- Power Input [W] -->
+                                                        <div class="row">
+                                                            <div class="col-sm-8">
+                                                                <label class="control-label">Електрическа мощност [W] (Клон)</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="number" class="form-control" value="48" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <!-- SFP & SPI -->
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <div class="container-fluid" style="border: 1px solid grey; padding: 10px;">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <label class="control-label">SFP [kW/(m3/s)]</label>
+                                                                        </div>
+                                                                        <div class="col-sm-1"></div>
+                                                                        <div class="col-sm-5">
+                                                                            <input type="number" class="form-control" value="3.19" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="checkbox">
+                                                                                <label><input type="checkbox" value="">Покажи SFP зона</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-1">
+                                                                            <label class="control-label">≤</label>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <input type="number" class="form-control" value="1.5" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="container-fluid" style="border: 1px solid grey; padding: 10px;">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <label class="control-label">SEL [J/m3]</label>
+                                                                        </div>
+                                                                        <div class="col-sm-1"></div>
+                                                                        <div class="col-sm-5">
+                                                                            <input type="number" class="form-control" value="3.194" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6">
+                                                                            <div class="checkbox">
+                                                                                <label><input type="checkbox" value="">Покажи избраната зона</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-1">
+                                                                            <label class="control-label">≤</label>
+                                                                        </div>
+                                                                        <div class="col-sm-5">
+                                                                            <input type="number" class="form-control" value="1500" disabled />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <h5 class="section-header">Пасивна къша</h5>
+                                                        <hr />
+                                                        <div class="row">
+                                                            <div class="col-sm-7">
+                                                                <label class="control-label">Ефективност на пасивна къша [W/(m3/h)]</label>
+                                                            </div>
+                                                            <div class="col-sm-1"></div>
+                                                            <div class="col-sm-4">
+                                                                <input type="number" class="form-control" value="3.19" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div class="row">
+                                                            <div class="col-sm-7">
+                                                                <div class="checkbox">
+                                                                    <label><input type="checkbox" value="">Площ на пасивната къща</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-1">
+                                                                <label class="control-label">≤</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="number" class="form-control" value="1500" disabled />
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <h5 class="section-header">ERP 2018</h5>
+                                                        <hr />
+                                                        <div class="row container-fluid">
+                                                            <div class="checkbox">
+                                                                <label><input type="checkbox" value="">Show ERP 2018 Area</label>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div role="tabpanel" class="tab-pane fade" id="sound">
+                                                    <form class="form-inline">
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                <label for="lp" class="control-label">Lp[m] </label>
+                                                                <input type="number" class="form-control" style="width: 30%;" />
+                                                                <input type="number" class="form-control" style="width: 30%;">
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <img src="assets/img/Q2.png" width="50px" height="30px" style="padding-left: 15px" />
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optradio" checked>Q=2
+                                                                </label>
+
+                                                                <img src="assets/img/Q4.png" width="50px" height="30px" style="padding-left: 15px" />
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optradio">Q=4
+                                                                </label>
+
+                                                                <img src="assets/img/Q8.png" width="50px" height="30px" style="padding-left: 15px" />
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="optradio">Q=8
+                                                                </label>
+                                                            </div>
+                                                            
+                                                            <div class="col-md-2">
+                                                                <div class="checkbox">
+                                                                    <label><input type="checkbox" value="">Add to report</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <br />
+                                                    <div class="table-responsive text-center">
+                                                        <table class="table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="text-center">LwA<br/>[dB(A)]</th>
+                                                                    <th class="text-center">63<br/>Hz</th>
+                                                                    <th class="text-center">125<br/>Hz</th>
+                                                                    <th class="text-center">250<br/>Hz</th>
+                                                                    <th class="text-center">500<br/>Hz</th>
+                                                                    <th class="text-center">1000<br/>Hz</th>
+                                                                    <th class="text-center">2000<br/>Hz</th>
+                                                                    <th class="text-center">4000<br/>Hz</th>
+                                                                    <th class="text-center">8000<br/>Hz</th>
+                                                                    <th class="text-center">Total</th>
+                                                                    <th class="text-center">Lp@1m</th>
+                                                                    <th class="text-center">Lp@3m</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Fresh</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Supply</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Exhaust</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Retrun</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Breakout</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="comment">Note:</label>
+                                        <textarea class="form-control" rows="3" id="note"></textarea>
+                                    </div>
+                                    <hr>
+                                    <br/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="co2level">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            <h4 class="section-header">Стая</h4>
+                                            <hr />
+                                            <div class="col-sm-6">
+                                                <form class="form-horizontal">
+                                                    <div class="form-group">
+                                                        <label for="maxpressure" class="control-label col-sm-7">Дължина [m]</label>
+                                                        <div class="form-group col-sm-5">
+                                                            <input type="number" class="form-control" value="8" name="CO2Level_Room_Length" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="maxpressure" class="control-label col-sm-7">широчина [m]</label>
+                                                        <div class="form-group col-sm-5">
+                                                            <input type="text" class="form-control" value="7" name="CO2Level_Room_Width" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="maxpressure" class="control-label col-sm-7">височина [m]</label>
+                                                        <div class="form-group col-sm-5">
+                                                            <input type="text" class="form-control" value="3" name="CO2Level_Room_Height" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-6 text-center">
+                                                <img src="assets/img/room.jpg" width="160px;" alt="room" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <h4 class="section-header">употреба</h4>
+                                            <hr />
+                                            <form class="form-horizontal">
+                                                <div class="row">
+                                                    <label class="col-sm-4 control-label"></label>
+                                                    <label class="col-sm-4 text-center">присъствие</label>
+                                                    <label class="col-sm-4 text-center">почивка</label>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <label class="control-label">Период [мин]</label>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input type="number" value="45" class="form-control" name="CO2Level_Usage_PeriodPresence" />
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input type="number" value="15" class="form-control" name="CO2Level_Usage_PeriodBreak" />
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <label class="control-label">Хора [hr]</label>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input type="number" value="20" class="form-control" name="CO2Level_Usage_PeoplePresence" />
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input type="number" value="0" class="form-control" name="CO2Level_Usage_PeopleBreak" />
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label class="control-label">Ниво на дейност [met]</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="number" value="1.2" class="form-control" name="CO2Level_Usage_Activity" />
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label class="control-label">CO2 Производство [l / (h човек)]</label>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="number" value="20.4" class="form-control" disabled />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <h4 class="section-header">Параметри</h4>
+                                            <hr />
+                                            <form class="form-horizontal">
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <label class="control-label">Стандартна настройка</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <select class="form-control">
+                                                            <option>Нито един</option>
+                                                            <option>Строителен бюлетин 101: Макс 1000 ppm CO2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <label class="control-label">Метод на изчисление</label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <select class="form-control">
+                                                            <option>макс, CO2 ниво</option>
+                                                            <option>Фиксиран дебит</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="row">
+                                                            <div class="col-sm-8">
+                                                                <label class="control-label">на открито CO2 Ниво [ppm]</label>]
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="number" value="380" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                       <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">Проверете работната точка
+                                                            </label>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="row">
+                                                            <div class="col-sm-8">
+                                                                <label class="control-label">макс. CO2 Ниво [ppm]</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="number" value="1000" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <div class="row">
+                                                            <div class="col-sm-8">
+                                                                <label class="control-label">Искан въздушен поток [l/s]</label>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <input type="text" value="182.90" class="form-control" disabled />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="row">
+                                                            <div class="col-sm-4">
+                                                                <label class="control-label">[m3/h]</label>
+                                                            </div>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" value="658" class="form-control" disabled />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <br>
+                                            <hr>
+                                            <div class="row container-fluid">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" value="">Добави за доклад
+                                                    </label>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="container-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src='assets/js/jquery.min.js'></script>
+    <script src='assets/js/bootstrap.min.js'></script>
+</body>
+</html>
